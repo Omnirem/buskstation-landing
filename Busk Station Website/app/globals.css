@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* font-family is set via tailwind.config.ts and layout.tsx */
+}
+
+@layer base {
+  :root {
+    /* Very Dark Gray theme base */
+    --background: 220 10% 10%; /* Very Dark Desaturated Blue-Gray #17171A */
+    --foreground: 210 40% 98%;   /* White/Light Gray for text */
+    
+    --card: 220 10% 15%;       /* Slightly Lighter Dark Gray for cards #212126 */
+    --card-foreground: 210 40% 95%; /* Text on cards */
+    
+    --popover: 220 10% 8%; /* Darker for popovers #121214 */
+    --popover-foreground: 210 40% 95%; /* Text on popovers */
+    
+    /* Cyan color scheme as per user request */
+    --primary: 180 70% 65%;    /* Cyan hsl(180, 70%, 65%) */
+    --primary-foreground: 180 70% 10%; /* Dark Cyan for text on primary elements */
+    
+    --secondary: 220 8% 25%;  /* Muted Darker Gray/Blue for secondary elements */
+    --secondary-foreground: 210 35% 85%; /* Lighter text for secondary elements */
+    
+    --muted: 220 8% 20%; /* For subtle backgrounds or text */
+    --muted-foreground: 220 10% 65%; /* For subtle text */
+    
+    --accent: 180 80% 70%;    /* Lighter Cyan hsl(180, 80%, 70%) */
+    --accent-foreground: 180 80% 10%; /* Dark Cyan for text on accent elements */
+    
+    --destructive: 0 70% 55%; /* Standard destructive red */
+    --destructive-foreground: 0 0% 98%; /* Text on destructive elements */
+    
+    --border: 220 10% 20%; /* Borders, subtly lighter than cards #2B2B30 */
+    --input: 220 10% 20%; /* Input backgrounds */      
+    --ring: 180 70% 65%; /* Focus ring, matches new primary (Cyan) */
+    
+    --radius: 1rem; /* Consistent rounded corners (Tailwind's rounded-2xl) */
+
+    /* Chart colors using Cyan and Grays */
+    --chart-1: 180 70% 65%; /* Main New Primary Cyan */
+    --chart-2: 180 80% 70%; /* Main New Accent Cyan */
+    --chart-3: 210 10% 70%; /* Light Gray */
+    --chart-4: 180 70% 50%; /* Muted New Primary Cyan */
+    --chart-5: 210 5% 50%; /* Medium Gray */
+    
+    /* Sidebar specific colors (can inherit or be distinct) */
+    --sidebar-background: 220 10% 7%; /* Even Darker for sidebar #0F0F11 */
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 180 70% 65%; /* New Primary Cyan */
+    --sidebar-primary-foreground: 180 70% 10%; /* Dark Cyan */
+    --sidebar-accent: 180 80% 70%; /* New Accent Cyan */
+    --sidebar-accent-foreground: 180 80% 10%; /* Dark Cyan */
+    --sidebar-border: 220 10% 15%; /* #212126 */
+    --sidebar-ring: 180 70% 65%; /* New Primary Cyan */
+  }
+
+  /* The app is always in dark mode via <html class="dark"> */
+  .dark {
+    --background: 220 10% 10%; 
+    --foreground: 210 40% 98%;   
+    --card: 220 10% 15%;       
+    --card-foreground: 210 40% 95%;
+    --popover: 220 10% 8%; 
+    --popover-foreground: 210 40% 95%;
+    --primary: 180 70% 65%;    
+    --primary-foreground: 180 70% 10%; 
+    --secondary: 220 8% 25%;  
+    --secondary-foreground: 210 35% 85%; 
+    --muted: 220 8% 20%;
+    --muted-foreground: 220 10% 65%;
+    --accent: 180 80% 70%;    
+    --accent-foreground: 180 80% 10%; 
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;      
+    --ring: 180 70% 65%;      
+
+    /* Chart colors using Cyan and Grays */
+    --chart-1: 180 70% 65%; 
+    --chart-2: 180 80% 70%; 
+    --chart-3: 210 10% 70%; 
+    --chart-4: 180 70% 50%; 
+    --chart-5: 210 5% 50%; 
+
+    --sidebar-background: 220 10% 7%; 
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 180 70% 65%;
+    --sidebar-primary-foreground: 180 70% 10%;
+    --sidebar-accent: 180 80% 70%;
+    --sidebar-accent-foreground: 180 80% 10%;
+    --sidebar-border: 220 10% 15%;
+    --sidebar-ring: 180 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Optional: Subtle particle/starry background for Hero */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: hsla(var(--foreground), 0.7);
+  border-radius: 50%;
+  animation: twinkle 4s infinite ease-in-out;
+  box-shadow: 0 0 5px 1px hsla(var(--foreground), 0.5);
+}
+
+/* New Animations for Hero Elements */
+@keyframes spotlight-pulse {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(1.05); }
+}
+
+.animated-spotlight {
+  position: absolute;
+  width: 300px; /* Adjust size as needed */
+  height: 400px; /* Adjust size as needed */
+  background: radial-gradient(ellipse at center top, hsla(var(--primary), 0.2) 0%, transparent 70%);
+  animation: spotlight-pulse 8s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes waveform-bar-pulse {
+  0%, 100% { transform: scaleY(0.2); opacity: 0.7; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+.animated-waveform-bar {
+  position: absolute; /* Changed from relative for HeroSection logic */
+  bottom: 15%; /* Adjust position */
+  width: 6px; /* Adjust width */
+  background-color: hsla(var(--accent), 0.6); /* Uses accent color */
+  border-radius: 2px;
+  animation: waveform-bar-pulse 1.5s infinite ease-in-out;
+  transform-origin: bottom;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes ui-play-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.animated-ui-element {
+  position: absolute;
+  top: 20%; /* Adjust position */
+  right: 15%; /* Adjust position */
+  width: 100px; /* Adjust size */
+  height: 70px; /* Adjust size */
+  border: 2px solid hsla(var(--primary), 0.3); /* Uses primary color */
+  background-color: hsla(var(--background), 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.animated-ui-play-button {
+  width: 20px;
+  height: 20px;
+  background-color: hsla(var(--primary), 0.8); /* Uses primary color */
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  animation: ui-play-pulse 2s infinite ease-in-out;
+}
