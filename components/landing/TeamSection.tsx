@@ -17,7 +17,7 @@ const teamMembers = [
     imageAlt: 'Neil Johnathon, Co-founder & CCO',
     name: 'Neil Johnathon',
     title: 'Co-Founder & CCO',
-    bio: "Focused on helping fellow artists streamline their set prep, perform smarter, & connect better with their audience.",
+    bio: "Helping fellow artists prep set, perform smarter, & connect better with their audience.",
     dataAiHint: 'profile musician',
   },
 ];
