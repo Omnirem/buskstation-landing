@@ -1,4 +1,3 @@
-
 'use client';
 
 import TeamMemberCard from './TeamMemberCard';
@@ -15,10 +14,10 @@ const teamMembers = [
   },
   {
     imageSrc: '/neil-jonathan.jpeg',
-    imageAlt: 'Neil Johnathon Paul, Co-founder & Ad Hoc CCO',
-    name: 'Neil Johnathon Paul',
-    title: 'Co-Founder & Ad Hoc CCO',
-    bio: "Dedicated to amplifying the reach of fellow early artists to the world and beyond.",
+    imageAlt: 'Neil Johnathon, Co-founder & CCO',
+    name: 'Neil Johnathon',
+    title: 'Co-Founder & CCO',
+    bio: "Focused on helping fellow artists streamline their set prep, perform smarter, & connect better with their audience.",
     dataAiHint: 'profile musician',
   },
 ];
@@ -91,3 +90,4 @@ const TeamSection: React.FC = () => {
 };
 
 export default TeamSection;
+
