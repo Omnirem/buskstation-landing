@@ -1,4 +1,3 @@
-
 'use client';
 
 import FeatureCard from './FeatureCard';
@@ -24,7 +23,7 @@ const features = [
   {
     icon: CalendarDays,
     title: 'Event Management',
-    description: 'Promote your upcoming gigs with comprehensive event details and powerful promotional tools.',
+    description: 'Promote your upcoming gigs with a gig calendar, comprehensive event details, and powerful promotional tools.',
   },
   {
     icon: Users,
@@ -38,8 +37,8 @@ const features = [
   },
   {
     icon: DollarSign,
-    title: 'Earnings Tracker',
-    description: 'Easily track your earnings and tips per gig or over time, providing clear financial insights.',
+    title: 'Earnings Box',
+    description: 'Easily receive earnings from the audience and seamlessly keep a track of it through the in-app wallet and earnings tracker.',
   },
   {
     icon: SlidersHorizontal,
@@ -119,3 +118,4 @@ const FeaturesSection: React.FC = () => {
 };
 
 export default FeaturesSection;
+
