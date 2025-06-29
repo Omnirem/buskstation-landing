@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
@@ -63,7 +62,7 @@ const HowToSection: React.FC = () => {
             Get Started in <span className="text-primary">3 Easy Steps</span>
           </h2>
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
-            Joining Busk Station is quick and simple. Start supercharging your performances today.
+            Joining Busk Station is quick and simple. Start supercharging your performances as soon as we're out.
           </p>
         </div>
 
