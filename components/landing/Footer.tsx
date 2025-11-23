@@ -12,7 +12,6 @@ const Footer: React.FC = () => {
     { href: '#why-us', label: 'Why Us?' },
     { href: '#how-to', label: 'How To' },
     { href: '#benefits', label: 'Benefits' },
-    { href: '#team', label: 'Team' },
     { href: '#cta', label: 'Contact' },
   ];
 
