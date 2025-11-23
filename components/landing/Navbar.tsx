@@ -13,7 +13,6 @@ const navLinks = [
   { href: '#features', label: 'Features' },
   { href: '#how-to', label: 'How To' },
   { href: '#benefits', label: 'Benefits' },
-  { href: '#team', label: 'Team' },
 ];
 
 const Navbar: React.FC = () => {
