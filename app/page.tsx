@@ -4,7 +4,6 @@ import ProblemSolutionSection from '../components/landing/ProblemSolutionSection
 import FeaturesSection from '../components/landing/FeaturesSection';
 import HowToSection from '../components/landing/HowToSection';
 import BenefitsSection from '../components/landing/BenefitsSection';
-import TeamSection from '../components/landing/TeamSection';
 import CtaSection from '../components/landing/CtaSection';
 import Footer from '../components/landing/Footer';
 
@@ -18,7 +17,6 @@ export default function LandingPage() {
         <FeaturesSection />
         <HowToSection />
         <BenefitsSection />
-        <TeamSection />
         <CtaSection />
       </main>
       <Footer />
